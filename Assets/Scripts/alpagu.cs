@@ -26,33 +26,31 @@ public class alpagu : MonoBehaviour
             float_timer = 0;
         }
     }
-    void Start()
-    {
-
-    }
-    void Update()
+    void FixedUpdate()
     {
         #region movement
         Vector2 movement = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             movement.y = 1;
         }
-        if (Input.GetKey(KeyCode.DownArrow)|| Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             movement.y = -1;
         }
-        if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             movement.x = -1;
         }
-        if (Input.GetKey(KeyCode.RightArrow)|| Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             movement.x = 1;
         }
         alpagurigidbody2D.velocity = movement.normalized * 8f;
         #endregion
-
+    }
+    void Update()
+    {
         #region weapon
         if (float_weaponrate > float_timer)
         {
