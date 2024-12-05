@@ -7,20 +7,19 @@ public class alpagu : MonoBehaviour
     public Rigidbody2D alpagurigidbody2D;
     public GameObject alpagu_arrow;
     public GameObject alpagu_swordslash;
-    private bool bool_weaponbow = false;
-    private float float_weaponrate = 0.5f;
+    private bool bool_weaponbow = true;
     private float float_timer = 0;
     #endregion
 
     #region func
     public void func_weapon(GameObject prefab, float offset, bool weaponbow)
     {
-        if (Input.GetKey(KeyCode.Mouse0)|| Input.GetKey(KeyCode.M))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             Instantiate(prefab, transform.position + new Vector3(offset, 0, 0), transform.rotation);
             float_timer = 0;
         }
-        if (Input.GetKey(KeyCode.Mouse1)|| Input.GetKey(KeyCode.N))
+        if (Input.GetKey(KeyCode.Mouse1))
         {
             bool_weaponbow = weaponbow;
             float_timer = 0;
@@ -30,29 +29,45 @@ public class alpagu : MonoBehaviour
     {
         #region movement
         Vector2 movement = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             movement.y = 1;
         }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             movement.y = -1;
         }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             movement.x = -1;
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             movement.x = 1;
         }
         alpagurigidbody2D.velocity = movement.normalized * 8f;
+        if (alpagurigidbody2D.position.y > 2.25f)
+        {
+            alpagurigidbody2D.position = new Vector3(alpagurigidbody2D.position.x, 2.25f, 0);
+        }
+        if (-4.5f > alpagurigidbody2D.position.y)
+        {
+            alpagurigidbody2D.position = new Vector3(alpagurigidbody2D.position.x, -4.5f, 0);
+        }
+        if (alpagurigidbody2D.position.x > 8.5f)
+        {
+            alpagurigidbody2D.position = new Vector3(8.5f, alpagurigidbody2D.position.y, 0);
+        }
+        if (-8.5f > alpagurigidbody2D.position.x)
+        {
+            alpagurigidbody2D.position = new Vector3(-8.5f, alpagurigidbody2D.position.y, 0);
+        }
         #endregion
     }
     void Update()
     {
         #region weapon
-        if (float_weaponrate > float_timer)
+        if (0.5f > float_timer)
         {
             float_timer += Time.deltaTime;
         }
