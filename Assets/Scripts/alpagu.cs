@@ -25,7 +25,7 @@ public class alpagu : MonoBehaviour
             float_timer = 0;
         }
     }
-    void FixedUpdate()
+    void Update()
     {
         #region movement
         Vector2 movement = Vector2.zero;
@@ -63,9 +63,7 @@ public class alpagu : MonoBehaviour
             alpagurigidbody2D.position = new Vector3(-8.5f, alpagurigidbody2D.position.y, 0);
         }
         #endregion
-    }
-    void Update()
-    {
+
         #region weapon
         if (0.5f > float_timer)
         {
