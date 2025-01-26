@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item_arrow: {fileID: 512775160034191201, guid: 88efca8edca34de468fcc7d03f9647ba, type: 3}
+  item_food: {fileID: 6126109788266652716, guid: 1f23c561366110d449fba841d1380a1b, type: 3}

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class item_health : MonoBehaviour
+public class obstacle_house : MonoBehaviour
 {
     void Update()
     {
         transform.position += Vector3.left * 8 * Time.deltaTime;
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "border_left")
         {

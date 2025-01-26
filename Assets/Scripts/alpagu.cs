@@ -84,12 +84,12 @@ public class alpagu : MonoBehaviour
             Destroy(collision.gameObject);
             float_countarrow += 1;
         }
-        if (collision.gameObject.name == "item_health" || collision.gameObject.name == "item_health(Clone)")
+        if (collision.gameObject.name == "item_food" || collision.gameObject.name == "item_food(Clone)")
         {
             Destroy(collision.gameObject);
             float_health += 1;
         }
-        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)")
+        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)" || collision.gameObject.name == "obstacle_house" || collision.gameObject.name == "obstacle_house(Clone)")
         {
             Destroy(collision.gameObject);
             float_health -= 1;
