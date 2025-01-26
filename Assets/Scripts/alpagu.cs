@@ -7,24 +7,13 @@ public class alpagu : MonoBehaviour
     public Rigidbody2D alpagurigidbody2D;
     public GameObject alpagu_arrow;
     public GameObject alpagu_swordslash;
-    private bool bool_weaponbow = true;
-    private float float_timer = 0;
+    public bool bool_weaponbow = true;
+    public float float_countarrow = 5;
+    public float float_health = 3;
+    public float float_timer_weapon = 0;
     #endregion
 
     #region func
-    public void func_weapon(GameObject prefab, float offset, bool weaponbow)
-    {
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            Instantiate(prefab, transform.position + new Vector3(offset, 0, 0), transform.rotation);
-            float_timer = 0;
-        }
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            bool_weaponbow = weaponbow;
-            float_timer = 0;
-        }
-    }
     void Update()
     {
         #region movement
@@ -45,42 +34,61 @@ public class alpagu : MonoBehaviour
         {
             movement.x = 1;
         }
-        alpagurigidbody2D.velocity = movement.normalized * 8f;
-        if (alpagurigidbody2D.position.y > 2.25f)
-        {
-            alpagurigidbody2D.position = new Vector3(alpagurigidbody2D.position.x, 2.25f, 0);
-        }
-        if (-4.5f > alpagurigidbody2D.position.y)
-        {
-            alpagurigidbody2D.position = new Vector3(alpagurigidbody2D.position.x, -4.5f, 0);
-        }
-        if (alpagurigidbody2D.position.x > 8.5f)
-        {
-            alpagurigidbody2D.position = new Vector3(8.5f, alpagurigidbody2D.position.y, 0);
-        }
-        if (-8.5f > alpagurigidbody2D.position.x)
-        {
-            alpagurigidbody2D.position = new Vector3(-8.5f, alpagurigidbody2D.position.y, 0);
-        }
+        alpagurigidbody2D.velocity = movement * 8f;
+        float border_x = Mathf.Clamp(alpagurigidbody2D.position.x, -8.5f, 8.5f);
+        float border_y = Mathf.Clamp(alpagurigidbody2D.position.y, -4.5f, 2.25f);
+        alpagurigidbody2D.position = new Vector3(border_x, border_y, 0);
         #endregion
 
         #region weapon
-        if (0.5f > float_timer)
+        if (0.5f > float_timer_weapon)
         {
-            float_timer += Time.deltaTime;
+            float_timer_weapon += Time.deltaTime;
         }
         else
         {
             if (bool_weaponbow)
             {
-                func_weapon(alpagu_arrow, 1, false);
+                if (float_countarrow > 0)
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        Instantiate(alpagu_arrow, transform.position + new Vector3(1, 0, 0), transform.rotation);
+                        float_countarrow -= 1;
+                    }
+                }
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    bool_weaponbow = false;
+                }
             }
             else
             {
-                func_weapon(alpagu_swordslash, 2, true);
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+                    Instantiate(alpagu_swordslash, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                }
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    bool_weaponbow = true;
+                }
             }
+            float_timer_weapon = 0;
         }
         #endregion
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "item_arrow")
+        {
+            Destroy(collision.gameObject);
+            float_countarrow += 1;
+        }
+        if (collision.gameObject.name == "item_health")
+        {
+            Destroy(collision.gameObject);
+            float_health += 1;
+        }
     }
     #endregion
 }

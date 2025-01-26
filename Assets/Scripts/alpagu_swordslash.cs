@@ -7,8 +7,4 @@ public class alpagu_swordslash : MonoBehaviour
     {
         Destroy(gameObject, 0.25f);
     }
-    void Update()
-    {
-        
-    }
 }
