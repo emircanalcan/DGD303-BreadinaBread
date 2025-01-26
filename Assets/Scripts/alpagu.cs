@@ -53,7 +53,7 @@ public class alpagu : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
-                        Instantiate(alpagu_arrow, transform.position + new Vector3(1, 0, 0), transform.rotation);
+                        Instantiate(alpagu_arrow, transform.position + new Vector3(0.96f, 0, 0), transform.rotation);
                         float_countarrow -= 1;
                     }
                 }
@@ -66,7 +66,7 @@ public class alpagu : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.Mouse0))
                 {
-                    Instantiate(alpagu_swordslash, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                    Instantiate(alpagu_swordslash, transform.position + new Vector3(1.92f, 0, 0), transform.rotation);
                 }
                 if (Input.GetKey(KeyCode.Mouse1))
                 {
@@ -79,15 +79,20 @@ public class alpagu : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "item_arrow")
+        if (collision.gameObject.name == "item_arrow" || collision.gameObject.name == "item_arrow(Clone)")
         {
             Destroy(collision.gameObject);
             float_countarrow += 1;
         }
-        if (collision.gameObject.name == "item_health")
+        if (collision.gameObject.name == "item_health" || collision.gameObject.name == "item_health(Clone)")
         {
             Destroy(collision.gameObject);
             float_health += 1;
+        }
+        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)")
+        {
+            Destroy(collision.gameObject);
+            float_health -= 1;
         }
     }
     #endregion

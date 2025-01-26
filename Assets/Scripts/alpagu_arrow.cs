@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class alpagu_arrow : MonoBehaviour
 {
+    public GameObject item_arrow;
     void Update()
     {
         transform.position += Vector3.right * 16 * Time.deltaTime;
@@ -12,6 +13,12 @@ public class alpagu_arrow : MonoBehaviour
         if (collision.gameObject.name == "border_right")
         {
             Destroy(gameObject);
+        }
+        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            Instantiate(item_arrow, transform.position + new Vector3(1.28f, 0, 0), transform.rotation);
         }
     }
 }
