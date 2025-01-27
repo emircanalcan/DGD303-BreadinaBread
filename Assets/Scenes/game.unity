@@ -122,6 +122,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &272290037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272290038}
+  - component: {fileID: 272290039}
+  m_Layer: 0
+  m_Name: game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272290038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272290037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &272290039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272290037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab789b6d48f57e4b985c7bf3d333b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chinese_bow1: {fileID: 185033048002447297, guid: 65bf52cb4439dc24382fc375b5252594, type: 3}
+  chinese_sword1: {fileID: 3505990835220212504, guid: fa4ea33ad05996a4da1e6d6f5f4397e8, type: 3}
+  obstacle_barricade: {fileID: 3471213054751259618, guid: 9ede982a4c7235b44841125ced6d9e5b, type: 3}
+  obstacle_house: {fileID: 6844941847926387953, guid: a8f93fccda90a6144ac88d3bf50c6755, type: 3}
+  float_timer_spawn: 0
 --- !u!1 &340145387
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +242,7 @@ Transform:
   m_GameObject: {fileID: 340145387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalPosition: {x: -11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -390,7 +439,7 @@ Transform:
   m_GameObject: {fileID: 551419405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: 0, z: 0}
+  m_LocalPosition: {x: 11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -495,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 1619911591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalPosition: {x: -11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -604,7 +653,7 @@ MonoBehaviour:
   alpagu_arrow: {fileID: 6532075564149612761, guid: 9540b947533d9494889ba449f2bbc7e4, type: 3}
   alpagu_swordslash: {fileID: 4127695629395459460, guid: d8bac48f02b68f7438f55206d9642a19, type: 3}
   bool_weaponbow: 1
-  float_countarrow: 5
+  float_countarrow: 6
   float_health: 3
   float_timer_weapon: 0
 --- !u!50 &1967102442
@@ -685,6 +734,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1967102439}
-  - {fileID: 551419408}
   - {fileID: 1619911594}
   - {fileID: 340145389}
+  - {fileID: 551419408}
+  - {fileID: 272290038}

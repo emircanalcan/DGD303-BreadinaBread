@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class alpagu : MonoBehaviour
 {
     #region var
@@ -76,7 +77,24 @@ public class alpagu : MonoBehaviour
             float_timer_weapon = 0;
         }
         #endregion
+
+        #region game
+        if (0 >= float_health)
+        {
+            SceneManager.LoadScene("gameover");
+        }
+        else if (float_health > 3)
+        {
+            float_health = 3;
+        }
+        if (float_countarrow > 9)
+        {
+            float_countarrow = 9;
+        }
+        #endregion
     }
+
+    #region collision
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "item_arrow" || collision.gameObject.name == "item_arrow(Clone)")
@@ -99,5 +117,7 @@ public class alpagu : MonoBehaviour
             float_health -= 1;
         }
     }
+    #endregion
+
     #endregion
 }
