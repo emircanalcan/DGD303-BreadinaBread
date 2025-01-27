@@ -41,7 +41,7 @@ public class alpagu : MonoBehaviour
         #endregion
 
         #region weapon
-        if (0.5f > float_timer_weapon)
+        if (0.4f > float_timer_weapon)
         {
             float_timer_weapon += Time.deltaTime;
         }
@@ -82,14 +82,18 @@ public class alpagu : MonoBehaviour
         if (collision.gameObject.name == "item_arrow" || collision.gameObject.name == "item_arrow(Clone)")
         {
             Destroy(collision.gameObject);
-            float_countarrow += 1;
+            float_countarrow += 3;
         }
         if (collision.gameObject.name == "item_food" || collision.gameObject.name == "item_food(Clone)")
         {
             Destroy(collision.gameObject);
             float_health += 1;
         }
-        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)" || collision.gameObject.name == "obstacle_house" || collision.gameObject.name == "obstacle_house(Clone)")
+        if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)" ||
+            collision.gameObject.name == "obstacle_house" || collision.gameObject.name == "obstacle_house(Clone)" ||
+            collision.gameObject.name == "chinese_arrow" || collision.gameObject.name == "chinese_arrow(Clone)" ||
+            collision.gameObject.name == "chinese_bow1" || collision.gameObject.name == "chinese_bow1(Clone)" ||
+            collision.gameObject.name == "chinese_sword1" || collision.gameObject.name == "chinese_sword1(Clone)")
         {
             Destroy(collision.gameObject);
             float_health -= 1;

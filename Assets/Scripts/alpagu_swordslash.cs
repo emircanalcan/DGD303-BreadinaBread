@@ -7,7 +7,7 @@ public class alpagu_swordslash : MonoBehaviour
     public GameObject item_food;
     void Start()
     {
-        Destroy(gameObject, 0.25f);
+        Destroy(gameObject, 0.2f);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +20,12 @@ public class alpagu_swordslash : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Instantiate(item_food, transform.position + new Vector3(1.28f, 0, 0), transform.rotation);
+        }
+        if (collision.gameObject.name == "chinese_bow1" || collision.gameObject.name == "chinese_bow1(Clone)" ||
+            collision.gameObject.name == "chinese_sword1" || collision.gameObject.name == "chinese_sword1(Clone)")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
