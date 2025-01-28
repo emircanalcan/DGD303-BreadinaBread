@@ -28,7 +28,9 @@ public class alpagu_arrow : MonoBehaviour
             Instantiate(item_food, transform.position + new Vector3(1.28f, 0, 0), transform.rotation);
         }
         if (collision.gameObject.name == "chinese_bow1" || collision.gameObject.name == "chinese_bow1(Clone)" ||
-            collision.gameObject.name == "chinese_sword1" || collision.gameObject.name == "chinese_sword1(Clone)")
+            collision.gameObject.name == "chinese_sword1" || collision.gameObject.name == "chinese_sword1(Clone)" ||
+            collision.gameObject.name == "obstacle_tree1" || collision.gameObject.name == "obstacle_tree1(Clone)" ||
+            collision.gameObject.name == "obstacle_tree2" || collision.gameObject.name == "obstacle_tree2(Clone)")
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);

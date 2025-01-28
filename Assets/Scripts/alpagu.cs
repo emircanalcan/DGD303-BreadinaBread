@@ -11,7 +11,7 @@ public class alpagu : MonoBehaviour
     public bool bool_weaponbow = true;
     public float float_countarrow = 5;
     public float float_health = 3;
-    public float float_timer_weapon = 0;
+    public float float_weapon_timer = 0;
     #endregion
 
     #region func
@@ -42,9 +42,9 @@ public class alpagu : MonoBehaviour
         #endregion
 
         #region weapon
-        if (0.4f > float_timer_weapon)
+        if (0.4f > float_weapon_timer)
         {
-            float_timer_weapon += Time.deltaTime;
+            float_weapon_timer += Time.deltaTime;
         }
         else
         {
@@ -74,7 +74,7 @@ public class alpagu : MonoBehaviour
                     bool_weaponbow = true;
                 }
             }
-            float_timer_weapon = 0;
+            float_weapon_timer = 0;
         }
         #endregion
 
@@ -109,6 +109,8 @@ public class alpagu : MonoBehaviour
         }
         if (collision.gameObject.name == "obstacle_barricade" || collision.gameObject.name == "obstacle_barricade(Clone)" ||
             collision.gameObject.name == "obstacle_house" || collision.gameObject.name == "obstacle_house(Clone)" ||
+            collision.gameObject.name == "obstacle_tree1" || collision.gameObject.name == "obstacle_tree1(Clone)" ||
+            collision.gameObject.name == "obstacle_tree2" || collision.gameObject.name == "obstacle_tree2(Clone)" ||
             collision.gameObject.name == "chinese_arrow" || collision.gameObject.name == "chinese_arrow(Clone)" ||
             collision.gameObject.name == "chinese_bow1" || collision.gameObject.name == "chinese_bow1(Clone)" ||
             collision.gameObject.name == "chinese_sword1" || collision.gameObject.name == "chinese_sword1(Clone)")

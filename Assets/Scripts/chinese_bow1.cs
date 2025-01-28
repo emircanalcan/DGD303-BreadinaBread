@@ -7,7 +7,7 @@ public class chinese_bow1 : MonoBehaviour
     public float float_timer_weapon = 0.8f;
     void Update()
     {
-        transform.position += Vector3.left * 8 * Time.deltaTime;
+        transform.position += Vector3.left * 4 * Time.deltaTime;
         if (0.8f > float_timer_weapon)
         {
             float_timer_weapon += Time.deltaTime;

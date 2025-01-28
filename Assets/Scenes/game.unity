@@ -170,6 +170,8 @@ MonoBehaviour:
   chinese_sword1: {fileID: 3505990835220212504, guid: fa4ea33ad05996a4da1e6d6f5f4397e8, type: 3}
   obstacle_barricade: {fileID: 3471213054751259618, guid: 9ede982a4c7235b44841125ced6d9e5b, type: 3}
   obstacle_house: {fileID: 6844941847926387953, guid: a8f93fccda90a6144ac88d3bf50c6755, type: 3}
+  obstacle_tree1: {fileID: 5264451177078299307, guid: 8371e0d174ce8524ab3bddab9569d898, type: 3}
+  obstacle_tree2: {fileID: 2164772411788784749, guid: d5bdc83eb6b3e4641a037adab93385e5, type: 3}
   float_timer_spawn: 0
 --- !u!1 &340145387
 GameObject:
