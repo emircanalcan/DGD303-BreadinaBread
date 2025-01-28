@@ -17,7 +17,7 @@ public class game : MonoBehaviour
         new List<float> { 0.4f, 5, -1.25f },
         new List<float> { 0.4f, 6, 1.25f },
         new List<float> { 0.4f, 5, -2.5f },
-        new List<float> { 0.4f, 4, -1.25f }
+        new List<float> { 4, 4, -1.25f }
     };
     void Update()
     {
