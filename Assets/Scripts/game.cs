@@ -19,7 +19,19 @@ public class game : MonoBehaviour
         new List<float> { 0.4f, 5, -1.25f },
         new List<float> { 0.4f, 6, 1.25f },
         new List<float> { 0.4f, 5, -2.5f },
-        new List<float> { 4, 4, -1.25f }
+        new List<float> { 1.6f, 4, -1.25f },
+        new List<float> { 0.8f, 1, 2, 2, 1 },
+        new List<float> { 0.8f, 1, -1, 2, -2 },
+        new List<float> { 1.6f, 3, -2.5f },
+        new List<float> { 1.6f, 4, -1.25f },
+        new List<float> { 0.8f, 1, 2, 1, 1},
+        new List<float> { 0.8f, 1, 0, 1, -1},
+        new List<float> { 0.8f, 1, -2, 1, -3, 1, -4},
+        new List<float> { 1.6f, 2, 2, 2, 1, 2, 0, 2, -1, 2, -2, 2, -3, 2, -4 },
+        new List<float> { 0.4f, 5, 2.5f, 6, 1.25f, 5, 0, 6, -1.25f, 5, -2.5f, 6, -3.75f },
+        new List<float> { 0.4f, 6, 2.5f, 5, 1.25f, 6, 0, 5, -1.25f, 6, -2.5f, 5, -3.75f },
+        new List<float> { 0.4f, 5, 2.5f, 6, 1.25f, 6, 0, 6, -1.25f, 6, -2.5f, 5, -3.75f },
+        new List<float> { 4.8f, 3, 2.5f, 3, 1.25f, 3, 0, 3, -1.25f, 3, -2.5f, 3, -3.75f },
     };
     void Update()
     {
@@ -29,7 +41,7 @@ public class game : MonoBehaviour
         }
         else
         {
-            if (4 > int_spawn_index)
+            if (16 > int_spawn_index)
             {
                 for (int i = 1; i < list_instantiate[int_spawn_index].Count; i += 2)
                 {
