@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class game : MonoBehaviour
 {
+    public GameObject bg1;
+    public GameObject bg2;
     public GameObject chinese_bow1;
     public GameObject chinese_sword1;
     public GameObject obstacle_barricade;
