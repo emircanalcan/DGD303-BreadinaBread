@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (1)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (6)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -378,7 +378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (2)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (5)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -689,7 +689,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (4)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (3)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (1)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -917,7 +917,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (3)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (2)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1371,7 +1371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (5)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1468,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095037514961872985, guid: 11bf88be9f8566842a558a1bff81b277, type: 3}
       propertyPath: m_Name
-      value: bg1 (4)
+      value: bg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1485,7 +1485,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4269694361614541395, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_Name
-      value: bg2 (6)
+      value: bg2
       objectReference: {fileID: 0}
     - target: {fileID: 6067625436151784263, guid: 21a68629a509553429c591825b2f4545, type: 3}
       propertyPath: m_LocalPosition.x
