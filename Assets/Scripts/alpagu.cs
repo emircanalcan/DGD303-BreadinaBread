@@ -81,7 +81,7 @@ public class alpagu : MonoBehaviour
         #region game
         if (0 >= float_health)
         {
-            SceneManager.LoadScene("gameover");
+            SceneManager.LoadScene("gamelose");
         }
         else if (float_health > 3)
         {
